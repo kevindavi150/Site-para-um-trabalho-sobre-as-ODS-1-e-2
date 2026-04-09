@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminário ODS 1 e 2 | Design Premium</title>
+    <!-- Importando Fonte Moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ods1: #e5243b;
+            --ods2: #dda63a;
+            --bg: #ffffff;
+            --card-bg: #f8f9fa;
+            --accent: #0071e3;
+            --text: #1d1d1f;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Barra de Progresso no Topo */
+        #progress-bar {
+            position: fixed; top: 0; left: 0; height: 5px;
+            background: linear-gradient(to right, var(--ods1), var(--ods2));
+            width: 0%; z-index: 2000;
+        }
+
+        /* Navegação Minimalista */
+        nav {
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 10px 30px; border-radius: 50px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            z-index: 1000; display: flex; gap: 20px;
+        }
+
+        nav a { text-decoration: none; color: #86868b; font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--text); }
+
+        /* Capa de Impacto */
+        header {
+            height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            background: radial-gradient(circle at center, #fff 0%, #f2f2f2 100%);
+            text-align: center; padding: 20px;
+        }
+
+        header h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 800; letter-spacing: -2px; line-height: 1; }
+        header p { font-size: 1.2rem; color: #86868b; margin-top: 20px; max-width: 600px; }
+
+        /* Seções e Cards */
+        .section-container { padding: 100px 20px; max-width: 1100px; margin: auto; }
+        
+        .card {
+            background: var(--card-bg); border-radius: 30px; padding: 60px;
+            margin-bottom: 50px; transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0,0,0,0.05); position: relative;
+        }
+
+        .card:hover { transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+
+        .orador-badge {
+            position: absolute; top: -15px; right: 40px;
+            background: var(--text); color: white; padding: 8px 20px;
+            border-radius: 20px; font-size: 0.8rem; font-weight: bold;
+        }
+
+        h2 { font-size: 3rem; font-weight: 700; margin-bottom: 25px; letter-spacing: -1px; }
+        .ods1-text { color: var(--ods1); }
+        .ods2-text { color: var(--ods2); }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+        .grid-item { background: white; padding: 25px; border-radius: 20px; }
+
+        /* Footer */
+        footer { padding: 100px 20px; text-align: center; color: #86868b; border-top: 1px solid #eee; }
+
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            h2 { font-size: 2rem; }
+            .card { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<nav>
+    <a href="#intro">Início</a>
+    <a href="#pobreza">ODS 1</a>
+    <a href="#fome">ODS 2</a>
+    <a href="#agro">Agricultura</a>
+    <a href="#uniao">Conexão</a>
+</nav>
+
+<header id="intro">
+    <h1>Futuro <br> <span style="color: var(--ods1)">Sustentável</span></h1>
+    <p>Apresentação detalhada sobre a Erradicação da Pobreza e a Agricultura Sustentável.</p>
+    <div style="margin-top: 40px; font-weight: bold; font-size: 0.9rem;">ORADOR 1: Introdução ao Tema Global</div>
+</header>
+
+<div class="section-container">
+    
+    <!-- ODS 1 -->
+    <section id="pobreza" class="card">
+        <div class="orador-badge">ORADOR 2</div>
+        <h2 class="ods1-text">Erradicação da Pobreza</h2>
+        <p>A ODS 1 busca garantir que todos os seres humanos tenham o básico para uma vida digna.</p>
+        <div class="grid">
+            <div class="grid-item">
+                <h3>O Desafio</h3>
+                <p>Mais de 700 milhões de pessoas vivem com menos de R$ 12 por dia em termos globais.</p>
+            </div>
+            <div class="grid-item">
+                <h3>A Meta</h3>
+                <p>Criar sistemas de proteção social e garantir direitos iguais a recursos econômicos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ODS 2 -->
+    <section id="fome" class="card">
+        <div class="orador-badge">ORADOR 3</div>
+        <h2 class="ods2-text">Fome Zero</h2>
+        <p>Segurança alimentar significa que todas as pessoas, o tempo todo, têm acesso físico e econômico a alimentos saudáveis.</p>
+        <div class="grid">
+            <div class="grid-item" style="border-bottom: 5px solid var(--ods2)">
+                <h3>Má Distribuição</h3>
+                <p>O foco não é apenas produzir mais, mas distribuir melhor e evitar o desperdício.</p>
+            </div>
+            <div class="grid-item" style="border-bottom: 5px solid var(--ods2)">
+                <h3>Nutrição</h3>
+                <p>Combater a anemia e a desnutrição em crianças e idosos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agricultura -->
+    <section id="agro" class="card" style="background: #1d1d1f; color: white;">
+        <div class="orador-badge" style="background: #2ecc71;">ORADOR 4</div>
+        <h2 style="color: #2ecc71;">Agricultura Sustentável</h2>
+        <p style="color: #86868b;">A técnica que salva o planeta enquanto alimenta a população.</p>
+        <ul style="margin-top: 20px; list-style: none;">
+            <li>🌱 <strong>Biofertilizantes:</strong> Redução de produtos químicos.</li>
+            <li>💧 <strong>Gestão de Água:</strong> Irrigação por gotejamento inteligente.</li>
+            <li>🔄 <strong>Rotação de Culturas:</strong> Mantendo o solo vivo por décadas.</li>
+        </ul>
+    </section>
+
+    <!-- Conexão -->
+    <section id="uniao" class="card">
+        <div class="orador-badge">ORADOR 5</div>
+        <h2>A Ponte entre as ODS</h2>
+        <p>Entenda por que não conseguimos resolver um problema sem o outro.</p>
+        <p style="margin-top: 20px;">A <strong>Pobreza Rural</strong> é combatida quando damos tecnologia sustentável ao pequeno agricultor. Ele sai da miséria e fornece comida barata para a cidade, combatendo a fome urbana.</p>
+    </section>
+
+    <!-- Conclusão -->
+    <section id="conclusao" class="card" style="text-align: center; border: none; background: transparent;">
+        <div class="orador-badge">ORADOR 6</div>
+        <h2>Chamada para Ação</h2>
+        <p>Como sociedade, nosso papel é cobrar políticas públicas de incentivo ao pequeno produtor e reduzir o desperdício doméstico.</p>
+        <div style="margin-top: 40px; font-weight: 800; color: var(--accent);">OBRIGADO PELA ATENÇÃO.</div>
+    </section>
+
+</div>
+
+<footer>
+    <p>Grupo de Seminário ODS | 2024 | Versão 2.0</p>
+</footer>
+
+<script>
+    // Script simples para a barra de progresso
+    window.onscroll = function() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+</script>
+
+</body>
+</html>
